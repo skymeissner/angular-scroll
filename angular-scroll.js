@@ -68,7 +68,8 @@ angular.module('duScroll.scrollHelpers', ['duScroll.requestAnimation'])
       return $window.scrollTo(left, top);
     }
     el.scrollLeft = left;
-    el.scrollTop = top;
+    	$(el).slimscroll({scrollTo:top});
+    // el.scrollTop = top;
   };
 
   var scrollAnimation, deferred;
